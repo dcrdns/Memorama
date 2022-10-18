@@ -6,6 +6,7 @@ let fiCart;
       card.addEventListener( 'click', function() {
         if(card.getAttribute('facing')=='true'){
           console.log('No')
+          console.log(card.getAttribute('facing'));
         }
         else{
           card.classList.toggle('is-flipped');
@@ -17,6 +18,7 @@ let fiCart;
 
 
 function acumu(car){
+  console.log(cont);
   cont =cont+1;
   if(cont==2){
     if(car.getAttribute('id')!=fiCart.getAttribute('id')){
@@ -25,18 +27,21 @@ function acumu(car){
         setTimeout(()=>{
           car.setAttribute('facing', 'true');
           fiCart.setAttribute('facing', 'true');
-        },100)
-      }
-      else{
+        },100);
+        cont=0;
+      }else{
         setTimeout(() => {
           car.classList.toggle('is-flipped');
           fiCart.classList.toggle('is-flipped');
         }, 1500);
-  
+        fiCart.setAttribute('facing', 'false');
+        cont=0;
       }
+    }else{
+      cont=1;
     }
 
-    cont=0;
+
   }
   else{
     fiCart=car;
