@@ -9,7 +9,7 @@ body {
   width: 200px;
   height: 260px;
 /*   border: 1px solid #CCC; */
-  margin: 40px 0;
+  margin: 10px 0;
   perspective: 600px;
 }
 
@@ -57,3 +57,4 @@ img{
   height: 100%;
   object-fit: cover;
 }
+
