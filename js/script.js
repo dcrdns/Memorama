@@ -1,19 +1,25 @@
 var cards = document.querySelectorAll('.card');
 let cont =0;
 let fiCart;
+let b=0;
 
-[...cards].forEach((card)=>{
-      card.addEventListener( 'click', function() {
-        if(card.getAttribute('facing')!='true'){
-          card.classList.toggle('is-flipped');
-        }
-      });
-  });
+// [...cards].forEach((card)=>{
+//       card.addEventListener( 'click', function() {
+//         if(card.getAttribute('facing')!='true'){
+//           card.classList.toggle('is-flipped');
+//         }
+//       });
+//   });
 
 
 
 function acumu(car){
   cont =cont+1;
+  console.log(cont);
+  if(car.getAttribute('facing')!='true' & b==0){
+    car.classList.toggle('is-flipped');
+  }
+
   if(cont==2){//se seleccionaron dos cartas.
     if(car.getAttribute('id')!=fiCart.getAttribute('id')){//Entra a este if si las cartas seleccionada no es la misma carta.
       if(car.getAttribute('ident')==fiCart.getAttribute('ident')){//entra al if si las cartas si son pareja.
@@ -26,6 +32,7 @@ function acumu(car){
         setTimeout(() => {
           car.classList.toggle('is-flipped');
           fiCart.classList.toggle('is-flipped');
+          b=0;
         }, 1500);
         fiCart.setAttribute('facing', 'false');
         cont=0;
