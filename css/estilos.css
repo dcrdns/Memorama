@@ -2,6 +2,7 @@ body {
   font-weight: bold;
   font-size: 20px;
   color: #333;
+  text-align: center;
  }
 
 .scene {
@@ -9,13 +10,19 @@ body {
   width: 200px;
   height: 260px;
 /*   border: 1px solid #CCC; */
-  margin: 10px 0;
+  margin: 0 auto;
+  padding: 10px;
   perspective: 600px;
 }
 
 .container {
     display: grid;
     grid-template-columns: auto auto auto auto;
+    width: 960px;
+    margin: 0 auto;
+    background-color: #E9C46A;
+    border: 1px solid #CCC;
+    border-radius: 5px;
 }
 
 .card {
@@ -45,7 +52,8 @@ body {
 }
 
 .card__face--front {
-  background: crimson;
+  background: #E76F51;
+  border-radius: 10px;
 }
 
 .card__face--back {
@@ -56,5 +64,6 @@ img{
   width: 200px;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 

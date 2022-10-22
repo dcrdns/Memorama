@@ -35,7 +35,9 @@ function alt(car){
         punt=punt+2;
         document.getElementById('lpun').innerHTML='Puntos: '+punt
         if (punt==12){
-          window.alert('ganaste');
+          setTimeout(()=>{
+            window.alert('ganaste');
+          },100);
         }
         cont=0;
       }else if(car.getAttribute('facing')=='false' | fiCart.getAttribute('facing')=='false'){//entra a este else cuando seleccionaste las dos cartas pero no son pareja.
