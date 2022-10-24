@@ -36,7 +36,7 @@ function alt(car){
         document.getElementById('lpun').innerHTML='Puntos: '+punt
         if (punt==12){
           setTimeout(()=>{
-            window.alert('ganaste');
+            window.alert('Ganaste! c:');
           },100);
         }
         cont=0;
